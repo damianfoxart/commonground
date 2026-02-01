@@ -1,6 +1,6 @@
 **\# Common Ground Design Structure**
 
-**\## \[1. Core Game Loop\](#core-game-loop)**
+**\## \1. Core Game Loop\**
 
 **What the player does repeatedly**
 
@@ -10,7 +10,7 @@
 1.4 Win / Completion Conditions  
 1.5 Session Flow (What a typical 30–60 minute play session looks like)
 
-**\## \[2. Player Control and Navigation\](#player-control-and-navigation)**
+**\## \2. Player Control and Navigation\**
 
 **How the player moves and interacts with the world**
 
@@ -21,7 +21,7 @@
 2.5 Fast Travel (Conditions, unlocks, limitations)  
 2.6 Environmental Obstacles (terrain, hazards, blocked paths)
 
-**\## \[3. World Structure\](#world-structure)**
+**\## \3. World Structure\**
 
 **How the game world is organized**
 
@@ -82,32 +82,32 @@
 
 **\## 8. Encounter System**
 
-8.1 Negotiation as Conflict
-8.2 Spectra Fundamentals
-8.3 Encounter Goal
-8.4 Turn Structure
-8.5 Opponent Action
-8.6 Resolution of Opponent Action
-8.7 Player Turn
-8.8 DOWN State
-8.9 Encounter Resolution
-8.10 Defeat
-8.11 Opponent Design Philosophy
-8.12 Surge System
-8.13 Surge Timing Rules
-8.14 Surge Interaction with ACT
-8.15 Surge Taxonomy
-8.16 Amplification Surges
-8.17 Substitution Surges
-8.18 Conditional Surges
-8.19 Information Surges
-8.20 Economy / World Surges
-8.21 Design Constraints (Hard Rules)
-8.22 Interaction with OATHS
+8.1 Negotiation as Conflict  
+8.2 Spectra Fundamentals  
+8.3 Encounter Goal  
+8.4 Turn Structure  
+8.5 Opponent Action  
+8.6 Resolution of Opponent Action  
+8.7 Player Turn  
+8.8 DOWN State  
+8.9 Encounter Resolution  
+8.10 Defeat  
+8.11 Opponent Design Philosophy  
+8.12 Surge System  
+8.13 Surge Timing Rules  
+8.14 Surge Interaction with ACT  
+8.15 Surge Taxonomy  
+8.16 Amplification Surges  
+8.17 Substitution Surges  
+8.18 Conditional Surges  
+8.19 Information Surges  
+8.20 Economy / World Surges  
+8.21 Design Constraints (Hard Rules)  
+8.22 Interaction with OATHS  
 
-**\## 9. Character & Party Systems**
+**\## 9. Character & Party Systems**  
 
-**How playable characters function mechanically**
+**How playable characters function mechanically**   
 
 9.1 Party Composition Rules  
 9.2 Character Recruitment Conditions  
@@ -119,18 +119,18 @@
 
 \## 10. Labor & Roster Distribution
 
-10.1 Roster Scaling, Encounter Pacing, and Community Friction
-10.2 VeteranXP (Encounter Participation Experience)
-10.3 Spectra Growth vs VeteranXP
-10.4 Psychological Compensation (Therapy at Clinic)
-10.5 ServiceXP (Labor Relevance)
-10.6 Clinic & Temporary Unavailability
-10.7 Labor Assignment Constraints
-10.8 Forced Party Composition
-10.9 Labor Force Bonus
-10.10 Structural Symmetry Spectra Bonus
+10.1 Roster Scaling, Encounter Pacing, and Community Friction  
+10.2 VeteranXP (Encounter Participation Experience)  
+10.3 Spectra Growth vs VeteranXP  
+10.4 Psychological Compensation (Therapy at Clinic)  
+10.5 ServiceXP (Labor Relevance)  
+10.6 Clinic & Temporary Unavailability  
+10.7 Labor Assignment Constraints  
+10.8 Forced Party Composition  
+10.9 Labor Force Bonus  
+10.10 Structural Symmetry Spectra Bonus  
 
-\## 11.Exuvian Pressure
+\## 11.Exuvian Pressure  
 
 **11\. Exuvian Pressure & Encounter Risk Systems**
 
