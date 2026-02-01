@@ -1,7 +1,7 @@
 **\# Common Ground Design Structure**
 
-**\## \1. Core Game Loop\**
-**What the player does repeatedly**
+**\## \1. Core Game Loop\**  
+**What the player does repeatedly**  
 
 1.1 Player Objectives (Short-term, Mid-term, Long-term)  
 1.2 Primary Player Actions (Explore, Restore, Build, Recruit, Manage, Challenge)  
@@ -9,8 +9,8 @@
 1.4 Win / Completion Conditions  
 1.5 Session Flow (What a typical 30–60 minute play session looks like)
 
-**\## \2. Player Control and Navigation\**
-**How the player moves and interacts with the world**
+**\## \2. Player Control and Navigation\**  
+**How the player moves and interacts with the world**  
 
 2.1 Player Movement (Traversal, speed, terrain effects)  
 2.2 World Navigation (World map vs local zone movement)  
@@ -19,8 +19,8 @@
 2.5 Fast Travel (Conditions, unlocks, limitations)  
 2.6 Environmental Obstacles (terrain, hazards, blocked paths)
 
-**\## \3. World Structure\**
-**How the game world is organized**
+**\## \3. World Structure\**  
+**How the game world is organized**  
 
 3.1 Zones and Biomes (Definition of a zone, size, boundaries)  
 3.2 Zone States (Degraded, Recovering, Restored, Overloaded)  
@@ -29,8 +29,8 @@
 3.5 World Connectivity (How zones link together)  
 3.6 Dynamic Changes to Zones Over Time
 
-**\## 4. Ecology & Simulation Systems**
-**How the environment behaves as a system**
+**\## 4. Ecology & Simulation Systems**  
+**How the environment behaves as a system**  
 
 4.1 Flora System (tiers, growth, placement rules)  
 4.2 Fauna System (trophic levels, population dynamics)  
@@ -41,9 +41,8 @@
 4.7 Player Impact on Ecology (positive and negative effects)  
 4.8 Feedback Systems (how the player is informed about ecological health)  
 
-
-**\## 5. Resource Systems**
-**What the player collects, carries, and converts**
+**\## 5. Resource Systems**  
+**What the player collects, carries, and converts**  
 
 5.1 Resource Types (flora units, fauna units, biomass, materials)  
 5.2 Resource Acquisition Methods  
@@ -52,8 +51,8 @@
 5.5 Resource Conversion (redemption, fusion, breakdown)  
 5.6 Resource Loss Conditions (escape, decay, destruction)
 
-**\## 6. Biota Creation & Restoration Systems**
-**How the player restores the world**
+**\## 6. Biota Creation & Restoration Systems**  
+**How the player restores the world**  
 
 6.1 Biota Tiers and Upgrade Rules  
 6.2 Biota Fusion Rules (compatible vs incompatible combinations)  
@@ -63,8 +62,8 @@
 6.6 Unlocking Higher Trophic Levels  
 6.7 Player Error States (misplacement, overpopulation, wrong tier usage)
 
-**\## 7. Settlement & Structure Systems (Stonehaven)**
-**How the village grows**
+**\## 7. Settlement & Structure Systems (Stonehaven)**  
+**How the village grows**  
 
 7.1 Settlement Zones and Buildable Areas  
 7.2 Building Types and Functions  
@@ -74,6 +73,7 @@
 7.6 Settlement Growth Metrics  
 
 **\## 8. Encounter System**
+**How conflict is resolved through negotiation** 
 
 8.1 Negotiation as Conflict  
 8.2 Spectra Fundamentals  
@@ -122,22 +122,20 @@
 10.9 Labor Force Bonus  
 10.10 Structural Symmetry Spectra Bonus  
 
-\## 11.Exuvian Pressure  
+\## 11.Exuvian Pressure   
+**How hostile presence creates risk and tension in wild zones**  
 
-**11\. Exuvian Pressure & Encounter Risk Systems**
-**How hostile presence creates risk and tension in wild zones**
+11.1 System Purpose & Design Constraints**  
+11.2 Player States in Wild Zones**  
+11.3 Time-Based Vulnerability (Staying Planted)**  
+11.4 Encounter Intrusion (Conditional / Rare)**  
+11.5 Exuvian Pressure Logic**  
+11.6 Mitigation Tools**  
+11.7 Dual-Meter System (Internal Tracking)**  
+11.8 Core Design Principle**  
 
-11.1 System Purpose & Design Constraints**
-11.2 Player States in Wild Zones**
-11.3 Time-Based Vulnerability (Staying Planted)**
-11.4 Encounter Intrusion (Conditional / Rare)**
-11.5 Exuvian Pressure Logic**
-11.6 Mitigation Tools**
-11.7 Dual-Meter System (Internal Tracking)**
-11.8 Core Design Principle**
-
-**\## 12. Rift & Teleportation Systems**
-**How spatial disruption works**
+**\## 12. Rift & Teleportation Systems**  
+**How spatial disruption works**  
 
 12.1 Rift Generation Rules  
 12.2 Rift Entry and Exit Behavior  
@@ -147,8 +145,8 @@
 12.6 Rift Cooldowns and Frequency  
 12.7 World State Impact of Rift Use
 
-\## 13. Progression & Unlock Systems
-How systems are gated over time
+\## 13. Progression & Unlock Systems  
+How systems are gated over time  
 
 13.1 System Unlock Order  
 13.2 Tiered Access to Mechanics  
@@ -158,7 +156,7 @@ How systems are gated over time
 13.6 Late-Game System Expansion   
 
 \## 14. Difficulty & Pressure Systems  
-How challenge is applied
+How challenge is applied  
 
 14.1 Environmental Pressure  
 14.2 Political / Sentient Pressure  
@@ -168,7 +166,7 @@ How challenge is applied
 14.6 Recovery Opportunities  
 14.7 Player Safety Nets  
 
-\## 15. UI & Player Feedback Systems
+\## 15. UI & Player Feedback Systems  
 How information is communicated  
 
 15.1 World State Indicators  
