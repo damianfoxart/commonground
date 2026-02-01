@@ -1,17 +1,15 @@
 **\# Common Ground Design Structure**
 
 **\## \1. Core Game Loop\**
-
 **What the player does repeatedly**
 
 1.1 Player Objectives (Short-term, Mid-term, Long-term)  
-1.2 Primary Player Actions (Explore, Restore, Build, Recruit, Defend, Manage)  
+1.2 Primary Player Actions (Explore, Restore, Build, Recruit, Manage, Challenge)  
 1.3 Failure States and Recovery  
 1.4 Win / Completion Conditions  
 1.5 Session Flow (What a typical 30–60 minute play session looks like)
 
 **\## \2. Player Control and Navigation\**
-
 **How the player moves and interacts with the world**
 
 2.1 Player Movement (Traversal, speed, terrain effects)  
@@ -22,7 +20,6 @@
 2.6 Environmental Obstacles (terrain, hazards, blocked paths)
 
 **\## \3. World Structure\**
-
 **How the game world is organized**
 
 3.1 Zones and Biomes (Definition of a zone, size, boundaries)  
@@ -33,7 +30,6 @@
 3.6 Dynamic Changes to Zones Over Time
 
 **\## 4. Ecology & Simulation Systems**
-
 **How the environment behaves as a system**
 
 4.1 Flora System (tiers, growth, placement rules)  
@@ -47,7 +43,6 @@
 
 
 **\## 5. Resource Systems**
-
 **What the player collects, carries, and converts**
 
 5.1 Resource Types (flora units, fauna units, biomass, materials)  
@@ -58,7 +53,6 @@
 5.6 Resource Loss Conditions (escape, decay, destruction)
 
 **\## 6. Biota Creation & Restoration Systems**
-
 **How the player restores the world**
 
 6.1 Biota Tiers and Upgrade Rules  
@@ -70,7 +64,6 @@
 6.7 Player Error States (misplacement, overpopulation, wrong tier usage)
 
 **\## 7. Settlement & Structure Systems (Stonehaven)**
-
 **How the village grows**
 
 7.1 Settlement Zones and Buildable Areas  
@@ -106,7 +99,6 @@
 8.22 Interaction with OATHS  
 
 **\## 9. Character & Party Systems**  
-
 **How playable characters function mechanically**   
 
 9.1 Party Composition Rules  
@@ -133,7 +125,6 @@
 \## 11.Exuvian Pressure  
 
 **11\. Exuvian Pressure & Encounter Risk Systems**
-
 **How hostile presence creates risk and tension in wild zones**
 
 11.1 System Purpose & Design Constraints**
@@ -146,7 +137,6 @@
 11.8 Core Design Principle**
 
 **\## 12. Rift & Teleportation Systems**
-
 **How spatial disruption works**
 
 12.1 Rift Generation Rules  
@@ -158,75 +148,68 @@
 12.7 World State Impact of Rift Use
 
 \## 13. Progression & Unlock Systems
-
 How systems are gated over time
 
-13.1 System Unlock Order
-13.2 Tiered Access to Mechanics
-13.3 Soft Gating vs Hard Gating
-13.4 Player Learning Curve
-13.5 Preventing System Overload
-13.6 Late-Game System Expansion
+13.1 System Unlock Order  
+13.2 Tiered Access to Mechanics  
+13.3 Soft Gating vs Hard Gating  
+13.4 Player Learning Curve  
+13.5 Preventing System Overload  
+13.6 Late-Game System Expansion   
 
-\## 14. Difficulty & Pressure Systems
-
+\## 14. Difficulty & Pressure Systems  
 How challenge is applied
 
-14.1 Environmental Pressure
-14.2 Political / Sentient Pressure
-14.3 Resource Scarcity
-14.4 Overexploitation Penalties
-14.5 Zone Instability Escalation
-14.6 Recovery Opportunities
-14.7 Player Safety Nets
+14.1 Environmental Pressure  
+14.2 Political / Sentient Pressure  
+14.3 Resource Scarcity  
+14.4 Overexploitation Penalties  
+14.5 Zone Instability Escalation  
+14.6 Recovery Opportunities  
+14.7 Player Safety Nets  
 
 \## 15. UI & Player Feedback Systems
+How information is communicated  
 
-How information is communicated
+15.1 World State Indicators  
+15.2 Ecology Readouts  
+15.3 Resource Feedback  
+15.4 Zone Status Displays  
+15.5 Error Messaging (what the player did wrong)  
+15.6 Progress Visualization  
+15.7 Minimal UI vs Detailed UI Modes  
 
-15.1 World State Indicators
-15.2 Ecology Readouts
-15.3 Resource Feedback
-15.4 Zone Status Displays
-15.5 Error Messaging (what the player did wrong)
-15.6 Progress Visualization
-15.7 Minimal UI vs Detailed UI Modes
+\## 16. Content Distribution & Pacing  
+How content is released to the player  
 
-\## 16. Content Distribution & Pacing
+16.1 Character Distribution Over Time  
+16.2 Zone Content Density  
+16.3 System Introduction Timing  
+16.4 Optional vs Required Content  
+16.5 Expansion Content Integration  
+16.6 Patch Content Integration Rules  
 
-How content is released to the player
+\## 17. Edge Cases & Exploits  
+What breaks if the player behaves weirdly  
 
-16.1 Character Distribution Over Time
-16.2 Zone Content Density
-16.3 System Introduction Timing
-16.4 Optional vs Required Content
-16.5 Expansion Content Integration
-16.6 Patch Content Integration Rules
+17.1 Sequence Breaking  
+17.2 Zone Skipping  
+17.3 Resource Hoarding  
+17.4 Overfarming  
+17.5 Soft Locks and Recovery  
+17.6 Unintended Strategy Detection  
 
-\## 17. Edge Cases & Exploits
+\## 18. Technical Constraints (Design-Facing)  
+What systems assume from the engine  
 
-What breaks if the player behaves weirdly
+18.1 Save/Load Assumptions  
+18.2 Persistent World State  
+18.3 System Interdependencies  
+18.4 Scalability (adding new zones, species, characters)  
+18.5 Performance Considerations (population counts, simulation depth)  
 
-17.1 Sequence Breaking
-17.2 Zone Skipping
-17.3 Resource Hoarding
-17.4 Overfarming
-17.5 Soft Locks and Recovery
-17.6 Unintended Strategy Detection
-
-\## 18. Technical Constraints (Design-Facing)
-
-What systems assume from the engine
-
-18.1 Save/Load Assumptions
-18.2 Persistent World State
-18.3 System Interdependencies
-18.4 Scalability (adding new zones, species, characters)
-18.5 Performance Considerations (population counts, simulation depth)
-
-**\## 1. Core Game Loop**
-
-**What the player does repeatedly**
+**\## 1. Core Game Loop**  
+**What the player does repeatedly**  
 
 - Player cycles between:
     - Exploring zones
