@@ -39,7 +39,10 @@
 4.5 Ecological Stability Conditions  
 4.6 Ecological Collapse and Recovery  
 4.7 Player Impact on Ecology (positive and negative effects)  
-4.8 Feedback Systems (how the player is informed about ecological health)  
+4.8 Feedback Systems (how the player is informed about ecological health) 
+4.9 Fauna and Sentient Encounter Logic
+4.10 Fauna Summoning Complexity and Learning Curve  
+4.11 Optional Exploitation Path  
 
 **\## 5. Resource Systems**  
 **What the player collects, carries, and converts**  
@@ -132,7 +135,9 @@
 11.5 Exuvian Pressure Logic**  
 11.6 Mitigation Tools**  
 11.7 Dual-Meter System (Internal Tracking)**  
-11.8 Core Design Principle**  
+11.8 Core Design Principle**
+11.9 “Chase Tick” Counter System for Exuvian Pressure**
+11.10 Anti-AFK / Passive Play Safeguards**  
 
 **\## 12. Rift & Teleportation Systems**  
 **How spatial disruption works**  
@@ -681,10 +686,10 @@ What systems assume from the engine
     - Fauna appears via generic environmental markers (e.g., shaking grass/shrubs)
     - No free-roaming fauna entities required for simulation
 - Population changes:
-    - Increases through player reintroduction
-    - Decreases through instability, invasives, or over-extraction
+    - Increases through player reintroduction    -Increases through player reintroduction
+    - Decreases through instability, invasives, or over-extraction    -Decreases through instability, invasives, or over-extraction
 
-**4.3 Invasive Species Mechanics**
+**4.3 Invasive Species Mechanics****4.3 Invasive Species Mechanics**
 
 - Invasive species can:
     - Enter zones from adjacent regions
@@ -747,42 +752,42 @@ _(Three tiers represent the normal ecological structure; megafauna handled separ
     - Regression of flora layers
     - Increased hazards
 - Recovery mechanics:
-    - Player-driven reintroduction of flora and fauna
-    - Stepwise rebuilding of trophic tiers
-- Recovery is:
-    - Always possible
-    - Slower if the zone was heavily overloaded
+    - Player-driven reintroduction of flora and fauna    -Player-driven reintroduction of flora and fauna
+    - Stepwise rebuilding of trophic tiers    -Stepwise rebuilding of trophic tiers
+- Recovery is:-Recovery is:
+    - Always possible    -Always possible
+    - Slower if the zone was heavily overloaded    -Slower if the zone was heavily overloaded
 
-**4.7 Player Impact on Ecology (positive and negative effects)**
+**4.7 Player Impact on Ecology (positive and negative effects)****4.7 Player Impact on Ecology (positive and negative effects)**
 
-- Positive impacts:
-    - Reintroducing native flora
-    - Restoring fauna populations
-    - Removing invasives
-    - Completing trophic structures
-- Negative impacts:
-    - Over-harvesting resources
-    - Overloading trophic tiers
-    - Introducing incompatible species
-- Player actions directly modify:
-    - Zone metrics
-    - Stability thresholds
-    - Invasive pressure
-- Systems are designed so:
-    - All damage is reversible
-    - Poor decisions increase recovery cost, not hard failure
+- Positive impacts:-Positive impacts:
+    - Reintroducing native flora    -Reintroducing native flora
+    - Restoring fauna populations    -Restoring fauna populations
+    - Removing invasives    -Removing invasives
+    - Completing trophic structures    -Completing trophic structures
+- Negative impacts:-Negative impacts:
+    - Over-harvesting resources    -Over-harvesting resources
+    - Overloading trophic tiers    -Overloading trophic tiers
+    - Introducing incompatible species    -Introducing incompatible species
+- Player actions directly modify:-Player actions directly modify:-Player actions directly modify:-Player actions directly modify:
+    - Zone metrics    -Zone metrics    -Zone metrics    -Zone metrics
+    - Stability thresholds    -Stability thresholds    -Stability thresholds    -Stability thresholds
+    - Invasive pressure    -Invasive pressure    -Invasive pressure    -Invasive pressure
+- Systems are designed so:-Systems are designed so:-Systems are designed so:-Systems are designed so:
+    - All damage is reversible    -All damage is reversible    -All damage is reversible    -All damage is reversible
+    - Poor decisions increase recovery cost, not hard failure    -Poor decisions increase recovery cost, not hard failure    -Poor decisions increase recovery cost, not hard failure    -Poor decisions increase recovery cost, not hard failure
 
-**4.8 Feedback Systems (how the player is informed about ecological health)**
+**4.8 Feedback Systems (how the player is informed about ecological health)****4.8 Feedback Systems (how the player is informed about ecological health)****4.8 Feedback Systems (how the player is informed about ecological health)****4.8 Feedback Systems (how the player is informed about ecological health)**
 
-- Visual feedback:
-    - Layered environmental art reflects zone state
-    - Visible changes in vegetation density
-- UI feedback:
-    - Zone ecology meters
-    - Stability indicators
-    - Warnings for overload or collapse risk
-- Diagnostic tools:
-    - Player-accessible “goggles” reveal:
+- Visual feedback:-Visual feedback:-Visual feedback:-Visual feedback:
+    - Layered environmental art reflects zone state    -Layered environmental art reflects zone state    -Layered environmental art reflects zone state    -Layered environmental art reflects zone state
+    - Visible changes in vegetation density    -Visible changes in vegetation density    -Visible changes in vegetation density    -Visible changes in vegetation density
+- UI feedback:-UI feedback:-UI feedback:-UI feedback:
+    - Zone ecology meters    -Zone ecology meters    -Zone ecology meters    -Zone ecology meters
+    - Stability indicators    -Stability indicators    -Stability indicators    -Stability indicators
+    - Warnings for overload or collapse risk    -Warnings for overload or collapse risk
+- Diagnostic tools:-Diagnostic tools:
+    - Player-accessible “goggles” reveal:    -Player-accessible “goggles” reveal:
         - Ideal ecological layout of a zone
         - Missing flora/fauna tiers
         - Overloaded or depleted areas
@@ -792,8 +797,76 @@ _(Three tiers represent the normal ecological structure; megafauna handled separ
 - Purpose:
     - Make ecological cause-and-effect legible
     - Encourage informed planning rather than trial-and-error
+ 
+  **##4.9 Fauna & Sentient Encounter Logic (Stillness-Based Spawning)**
 
-**5\. Resource Systems**
+* Fauna and sentient travelers have **low baseline encounter rates** in wild zones.  
+* Encounter chance **increases while the player remains still in a zone**.  
+* Stillness may be represented by:  
+
+  * Standing idle  
+  * Performing stationary mini-games  
+  * Using call/beacon actions (signals, lights, sounds, scent masking)  
+* The same actions that **increase fauna spawn chance also increase Exuvian Pressure**.  
+* Specific actions can be tuned to:  
+
+  * Attract specific fauna types  
+  * Attract sentient travelers  
+* Core risk–reward loop:  
+
+  * Staying still improves encounter rates  
+  * Staying still increases Exuvian threat
+  * 
+* Design principle:    
+
+  * Players must choose between safety through movement and opportunity through stillness
+ 
+    **##4.10 Fauna Summoning Complexity & Learning Curve  
+
+* Fauna summoning difficulty scales by **trophic tier**:  
+
+  * Low-tier fauna: simple summoning inputs, short stillness time  
+  * Higher-tier fauna: more complex inputs, longer stillness requirements  
+* Each species has associated **“wild lore”** defining effective summoning methods.  
+* Wild lore discovery methods:  
+
+  * Time spent in a zone gradually reveals fragments of lore  
+  * Lore fragments fill incomplete entries non-linearly  
+  * Radar/mining/fishing can uncover lore fragments  
+  * World objects (e.g., bottles, caches) can contain lore  
+* Conservatory acts as:  
+
+  * Lore archive  
+  * Player reference for summoning methods  
+* Design goal:  
+
+  * Knowledge reduces summoning friction  
+  * Observation and time in the wild substitute for tutorials
+ 
+  ##4.11 Optional Exploitation Path (High-Speed Summoning)  
+
+* Overclocked extraction (mining/fishing) can:   
+
+  * Force fauna to surface more frequently  
+  * Reduce stillness requirements  
+* Exploitation has escalating systemic costs:  
+
+  * Ecological damage  
+  * Aquifer degradation (see below)  
+* Optional bait mechanics:  
+
+  * Lower trophic fauna can be released to attract predators  
+  * Direct baiting may require crafted lures (consumables)  
+* Crafted lure system:  
+
+  * Lures are zone-specific  
+  * Crafted from endemic flora materials  
+  * Guarantees specific fauna spawns  
+* Design intent:  
+
+  * Fast methods exist but undermine long-term ecological stability  
+
+**##5\. Resource Systems**
 
 **What the player collects, carries, and converts**
 
@@ -2202,26 +2275,66 @@ Stonehaven becomes a reflection of its labor force, not through exclusion, but t
     - Cost of prolonged intervention
 - The system never removes player agency and never forces unavoidable loss.
 
-**12\. Rift & Teleportation Systems**
+**##11.9 “Chase Tick” Counter System for Exuvian Pressure**  
 
-**How spatial disruption works**
+* Each traversable sub-zone (screen/segment) starts an **Exuvian Pressure timer** on entry.  
+* Pressure **increases continuously while the player remains in the same sub-zone**.  
+* The **baseline pressure level scales with zone ecological health**:  
 
-**12.1 Rift Generation Rules**
+  * Ruined zones: low initial pressure, slow escalation  
+  * Restored zones: high initial pressure, rapid escalation  
+* Higher pressure increases:  
 
-- Rifts are temporary spatial portals that relocate the party between zones or sub-areas.
-- Rifts can be generated by:
-    - Lower ecological zone thresholds
-    - Scripted narrative events.
-- Rifts do not appear randomly during normal exploration.
-- Rifts are an early form of randomized fast travel, and their appearance diminishes as players unlock reliable forms of travel by upgrading the Port in Stonehaven.
+  * Chance of Exuvian spawn  
+  * Speed/frequency of Exuvian pursuit  
+* Player tools can **delay, stun, or reduce pressure temporarily**, but cannot nullify it.  
+* Intended curve:  
+
+  * Early game: low pressure, solitude-focused exploration  
+  * Late game: high pressure, active pursuit and frequent Exuvian encounters  
+* Design goal:  
+
+  * Restoration increases environmental hostility  
+  * Final-state zones become high-risk traversal spaces
+ 
+ ##11.10 Anti-AFK / Passive Play Safeguards  
+
+* Exuvian encounters operate on **real-time/ATB-style timers**, not turn-waiting.  
+* If the player does not input actions:  
+
+  * Exuvians continue attacking  
+  * Party members can be incapacitated and sent to clinic  
+* No dedicated “Run” command for Exuvian encounters.  
+* **SURGE is contextually repurposed as the escape action** in Exuvian encounters:  
+
+  * Activating Surge attempts a party-wide escape  
+  * Escape chance is probabilistic  
+  * Lighter / agile / cowardly characters have higher escape success  
+* Intended behavior:  
+
+  * AFK behavior leads to clinic downtime  
+  * Player must actively respond to Exuvian threats  
+
+**12\. Rift & Teleportation Systems**  
+
+**How spatial disruption works**  
+
+**12.1 Rift Generation Rules**  
+
+- Rifts are temporary spatial portals that relocate the party between zones or sub-areas.  
+- Rifts can be generated by:  
+    - Lower ecological zone thresholds  
+    - Scripted narrative events.  
+- Rifts do not appear randomly during normal exploration.  
+- Rifts are an early form of randomized fast travel, and their appearance diminishes as players unlock reliable forms of travel by upgrading the Port in Stonehaven.  
 
 **12.2 Rift Entry and Exit Behavior**
 
-- Entering a rift immediately transitions the party to a new location.
-- Exit points are always in valid, walkable sub-areas (no soft-lock spawns).
-- Party cohesion is preserved; all members travel together.
-- Herded fauna and carried flora do travel through rifts with the player.
-- The player regains control immediately upon exit.
+- Entering a rift immediately transitions the party to a new location.  
+- Exit points are always in valid, walkable sub-areas (no soft-lock spawns).  
+- Party cohesion is preserved; all members travel together.  
+- Herded fauna and carried flora do travel through rifts with the player.  
+- The player regains control immediately upon exit.  
 
 **12.3 Randomization and Targeting**
 
