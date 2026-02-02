@@ -27,7 +27,8 @@
 3.3 Zone Metrics (Ecology values, stability thresholds)  
 3.4 Sub-Areas and Expandable Areas Within Zones  
 3.5 World Connectivity (How zones link together)  
-3.6 Dynamic Changes to Zones Over Time
+3.6 Dynamic Changes to Zones Over Time  
+3.7 Fauna Visibility and Capture  
 
 **\## 4. Ecology & Simulation Systems**  
 **How the environment behaves as a system**  
@@ -40,9 +41,13 @@
 4.6 Ecological Collapse and Recovery  
 4.7 Player Impact on Ecology (positive and negative effects)  
 4.8 Feedback Systems (how the player is informed about ecological health) 
-4.9 Fauna and Sentient Encounter Logic
+4.9 Fauna and Sentient Encounter Logic  
 4.10 Fauna Summoning Complexity and Learning Curve  
 4.11 Optional Exploitation Path  
+4.12 Early-Game Over-Extraction Exploit Safeguards  
+4.13 Aquifer Health System (Global Environmental Metric)  
+4.14 Aquifer Purification Interaction  
+4.15 Character System Integration: Malang (Aquifer Specialist)  
 
 **\## 5. Resource Systems**  
 **What the player collects, carries, and converts**  
@@ -64,6 +69,9 @@
 6.5 Cooldowns, Costs, and Risk  
 6.6 Unlocking Higher Trophic Levels  
 6.7 Player Error States (misplacement, overpopulation, wrong tier usage)
+6.8 Herd Escape Probability  
+6.9 Overload: End Game Megafauna Summoning  
+6.10 Restoration Mini Game Systems  
 
 **\## 7. Settlement & Structure Systems (Stonehaven)**  
 **How the village grows**  
@@ -102,7 +110,7 @@
 8.22 Interaction with OATHS  
 
 **\## 9. Character & Party Systems**  
-**How playable characters function mechanically**   
+**How playable characters function mechanically**  
 
 9.1 Party Composition Rules  
 9.2 Character Recruitment Conditions  
@@ -125,7 +133,7 @@
 10.9 Labor Force Bonus  
 10.10 Structural Symmetry Spectra Bonus  
 
-\## 11.Exuvian Pressure   
+\## 11.Exuvian Pressure  
 **How hostile presence creates risk and tension in wild zones**  
 
 11.1 System Purpose & Design Constraints**  
@@ -135,8 +143,8 @@
 11.5 Exuvian Pressure Logic**  
 11.6 Mitigation Tools**  
 11.7 Dual-Meter System (Internal Tracking)**  
-11.8 Core Design Principle**
-11.9 “Chase Tick” Counter System for Exuvian Pressure**
+11.8 Core Design Principle**  
+11.9 “Chase Tick” Counter System for Exuvian Pressure**  
 11.10 Anti-AFK / Passive Play Safeguards**  
 
 **\## 12. Rift & Teleportation Systems**  
@@ -158,7 +166,8 @@ How systems are gated over time
 13.3 Soft Gating vs Hard Gating  
 13.4 Player Learning Curve  
 13.5 Preventing System Overload  
-13.6 Late-Game System Expansion   
+13.6 Late-Game System Expansion  
+13.7 Cultural Instruments and Museum System  
 
 \## 14. Difficulty & Pressure Systems  
 How challenge is applied  
@@ -649,6 +658,23 @@ What systems assume from the engine
     - Emergent events
     - Long-term consequences
     - Ongoing management gameplay
+ 
+##3.7 Fauna Visibility and Capture  
+
+* Fauna may be **visually present in zones before they are interactable**.  
+* Early-game fauna can:  
+
+  * Appear in background/foreground  
+  * Flee before encounter initiation  
+* Visibility communicates:  
+
+  * Species existence  
+  * Long-term goals  
+* Capture requires:  
+
+  * Correct summoning method  
+  * Reduced noise / stillness  
+  * Appropriate progression tools (music instruments from Museum)    
 
 **4\. Ecology & Simulation Systems**
 
@@ -821,7 +847,7 @@ _(Three tiers represent the normal ecological structure; megafauna handled separ
 
   * Players must choose between safety through movement and opportunity through stillness
  
-    **##4.10 Fauna Summoning Complexity & Learning Curve  
+  ##4.10 Fauna Summoning Complexity & Learning Curve  
 
 * Fauna summoning difficulty scales by **trophic tier**:  
 
@@ -865,6 +891,62 @@ _(Three tiers represent the normal ecological structure; megafauna handled separ
 * Design intent:  
 
   * Fast methods exist but undermine long-term ecological stability  
+ 
+    ##4.12 Early-Game Over-Extraction Exploit Safeguards  
+
+* Early-game zones start ecologically ruined, reducing immediate extraction cost.  
+* Safeguards against mass early-game farming:  
+
+  * Sustained mining/fishing chains increase Exuvian Pressure regardless of zone health  
+  * High extraction rates degrade aquifer health (global consequence)  
+* Over-extraction tradeoff:  
+
+  * Faster artifact discovery  
+  * Long-term systemic penalties  
+  
+##4.13 Aquifer Health System (Global Environmental Metric)  
+
+* Each zone tracks **Aquifer Health (%)**.  
+* Aquifer Health decreases with:  
+
+  * Sustained mining  
+  * Sustained fishing  
+  * Overclocked extraction chains  
+* Aquifer Health recovers when:  
+
+  * Extraction stops  
+  * Player remains in the zone  
+  * Aquifer purification mini-game is performed  
+* Aquifer Health has **global village-wide effects**:  
+
+  * Below 90%: –10% movement speed  
+  * Below 80%: –20% movement speed  
+  * Below 70%: –30% movement speed  
+  * Floor recommended at ~50% minimum speed  
+* Design goals:  
+
+  * Teach moderation  
+  * Allow recovery  
+  * Apply consequences without soft-locking  
+
+##4.14 Aquifer Purification Interaction  
+
+* Purification is a **movement-based mini-game** (e.g., sonar/marco-polo mechanic).  
+* Player must remain in the affected zone to restore aquifer health.  
+* Purification increases Exuvian Pressure due to stillness requirement.  
+* Radar tools double as aquifer health detection devices.  
+
+##4.15 Character System Integration: Malang (Aquifer Specialist)  
+
+* Malang enables:  
+
+  * Early access to aquifer health visualization  
+  * Faster aquifer purification  
+  * Reduced aquifer decay rate while in party  
+* Aquifer health is narratively attributed to Malang’s discovery but mechanically functions as:  
+
+  * A global extraction pressure metric  
+  * A systemic consequence layer independent of Exuvians  
 
 **##5\. Resource Systems**
 
@@ -1251,8 +1333,23 @@ _(Three tiers represent the normal ecological structure; megafauna handled separ
 - Player agency is expressed through:
     - What they create
     - What they transport
-    - Where they choose to release or overload
+    - Where they choose to release or overload  
+ 
+  ##6.10 Restoration Mini-Game System: Abstract Interaction Types  
 
+(Used for fauna summoning, sentient calling, aquifer purification, etc.)  
+
+* Pattern Replication (Simon-style)  
+* Timing Window (active stillness timing)  
+* Hold-and-Release (breath control input)  
+* Rotating Dial Alignment  
+* Memory Grid (brief reveal, then input)  
+* Rhythm Matching (low-intensity DDR-style)  
+* Stability Balance (keep meter within bounds)  
+* Hidden Object Micro-Scan  
+* Sequence Elimination (identify intruding element)  
+These systems align with the musical instruments of the Museum.
+  
 **7\. Settlement & Structure Systems (Stonehaven)**
 
 **How the village grows**
@@ -2478,6 +2575,31 @@ Stonehaven becomes a reflection of its labor force, not through exclusion, but t
     - Increase strategic depth
     - Do not invalidate early-game mechanics
     - Encourage revisiting and recontextualizing earlier zones
+ 
+  ##13.7 Cultural Instruments & Museum System  
+
+* Archaeology (via rare mining spawns) reveals **musical instruments**.  
+* Instruments are required to activate summoning mini-games.  
+* Each culture has a distinct instrument class:  
+
+  * Brass – Generican  
+  * Wind – Exfolian  
+  * Strings – Harpo  
+  * Keyboard – Hamkin  
+  * Drum – Rexen  
+  * Synthesizer – Golmech  
+* Instruments unlock specific mini-game variants.  
+* Museum functions as **instrument loadout**:  
+
+  * Only instruments currently on display can be used in the field  
+  * Players must return to Stonehaven to swap active instruments  
+* Certain characters can temporarily bypass loadout limits:  
+
+  * Cooldown-based field swapping ability  
+* Design intent:  
+
+  * Archaeology fuels ecology tools  
+  * Cultural artifacts become mechanical utilities   
 
 **14\. Difficulty & Pressure Systems**
 
