@@ -11,7 +11,7 @@ If you add a new doc, link it in this index so nothing gets buried.
 ## Current docs
 
 ### Scope
-- Expanded scope index: ./expanded-scope/
+- Expanded scope index: [./expanded-scope/](./expanded-scope/)
 - Vision: ./expanded-scope/vision.md
 - Lore & World Rules: ./expanded-scope/lore.md
 - Content Pipeline & Safety Rails: ./expanded-scope/pipeline.md
