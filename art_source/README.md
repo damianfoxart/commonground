@@ -18,5 +18,5 @@ This folder holds working art files (source files used to create exported game a
 ## Notes
 
 - Keep filenames descriptive.
-- If something becomes a “final” asset, export it and place the exported version in `/game/`.
+- If something becomes a "final" asset, export it and place the exported version in `/game/`.
 - Avoid keeping large source files inside the Godot import path to prevent accidental imports.
