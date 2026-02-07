@@ -23,5 +23,7 @@ If you add a new doc, link it in this index so nothing gets buried.
 - Structure Tier 1: [./structuretier1.md](./structuretier1.md)
 
 ## How we add new docs (simple rule)
-- If it is a question or open decision: put it in a dedicated file and link it here.
-- If it is a settled decision: keep it short and link it here.
+- If it’s a question or open decision: create a dedicated file and link it above.
+- If it’s settled: keep it short in the most relevant doc and link it above.
+- Avoid dumping notes in random folders: update this index so everything stays findable.
+
