@@ -20,7 +20,7 @@ If you add a new doc, link it in this index so nothing gets buried.
 
 
 ### Structure
-- Structure Tier 1: ./structuretier1.md
+- Structure Tier 1: [./structuretier1.md](./structuretier1.md)
 
 ## How we add new docs (simple rule)
 - If it is a question or open decision: put it in a dedicated file and link it here.
