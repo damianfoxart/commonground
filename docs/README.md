@@ -2,6 +2,12 @@
 
 This folder is the home for design documentation, scope notes, and project questions.
 
+## Start here
+
+If you are new, read **Vision** first, then **Structure**, then **Lore**, then **Pipeline**, then **Risks**.  
+If you add a new doc, link it in this index so nothing gets buried.
+
+
 ## Current docs
 
 ### Scope
