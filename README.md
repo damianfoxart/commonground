@@ -2,7 +2,8 @@
 
 Docs index: [docs/README.md](./docs/README.md)
 
-**Quick map**
+## Quick map
+
 - Design docs and decisions: [docs/](./docs/) (start here)
 - Deep design guardrails: [docs/expanded-scope/](./docs/expanded-scope/)
 - Godot project (game source + assets): [game/](./game/)
