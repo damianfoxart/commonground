@@ -9,6 +9,8 @@ Docs index: [docs/README.md](./docs/README.md)
 - Godot project (game source + assets): [game/](./game/)
 - Exported builds and release zips: [exports/](./exports/)
 - Working art source files (PSD/Krita/etc): [art_source/](./art_source/)
+- Rule of thumb: if it is design writing, it goes in /docs/ and gets linked from /docs/README.md.
+
 
 Common Ground is a systems-driven village stewardship game focused on negotiation, ecology, and community resilience rather than combat or conquest.
 
