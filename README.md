@@ -1,6 +1,9 @@
 # Common Ground
 
-Docs index: [./docs/README.md](./docs/README.md)
+Docs index: [docs/README.md](./docs/README.md)
+
+**Where things go:** Design docs live in `docs/` (start with `docs/README.md`), and deeper design guardrails live in `docs/expanded-scope/`. Game source and Godot project files live in `game/`. Art source files live in `art_source/`. Exports and build outputs go in `exports/`. If you are not sure where something belongs, link it from `docs/README.md` instead of adding new files at the repo root.
+
 
 **Common Ground** is a systems-driven village stewardship game focused on negotiation, ecology, and community resilience rather than combat or conquest.
 
