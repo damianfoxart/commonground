@@ -1,6 +1,13 @@
 # Common Ground
 
 Docs index: [docs/README.md](./docs/README.md)
+Quick map:
+- Design docs and decisions: [docs/](./docs/README.md) (start here)
+- Deep design guardrails: [docs/expanded-scope/](./docs/expanded-scope/README.md)
+- Godot project (game source + assets): [game/](./game/README.md)
+- Exported builds and release zips: [exports/](./exports/README.md)
+- Working art source files (PSD/Krita/etc): [art_source/](./art_source/README.md)
+
 
 **Where things go:** Design docs live in `docs/` (start with `docs/README.md`), and deeper design guardrails live in `docs/expanded-scope/`. Game source and Godot project files live in `game/`. Art source files live in `art_source/`. Exports and build outputs go in `exports/`. If you are not sure where something belongs, link it from `docs/README.md` instead of adding new files at the repo root.
 
