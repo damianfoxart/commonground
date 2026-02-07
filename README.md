@@ -1,6 +1,6 @@
 # Common Ground
 
-Docs index: ./docs/README.md
+Docs index: [./docs/README.md](./docs/README.md)
 
 **Common Ground** is a systems-driven village stewardship game focused on negotiation, ecology, and community resilience rather than combat or conquest.
 
