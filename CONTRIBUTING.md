@@ -2,69 +2,67 @@
 
 Thanks for helping build Common Ground.
 
-This repo is organized so ideas do not get lost, and game files do not get mixed with design writing or source art.
+This repo is organized so ideas do not get lost and game files do not get mixed with design writing or source art.
 
 ## Quick rules
 
-- If it is design writing, it goes in `/docs/` and gets linked from `/docs/README.md`.
-- If it is Godot project content, it goes in `/game/`.
-- If it is working source art (PSD, Krita, Aseprite, Blender), it goes in `/art_source/`.
-- If it is a build output (exports, release zips), it goes in `/exports/` and can be deleted and regenerated.
+- Design writing goes in `/docs/` and gets linked from `/docs/README.md`.
+- Godot project content goes in `/game/`.
+- Working source art (PSD, Krita, Aseprite, Blender) goes in `/art_source/`.
+- Build output (exports, release zips) goes in `/exports/` and can be deleted and regenerated.
 
 If you are not sure where something belongs, put it in `/docs/` as a short note and link it from `/docs/README.md`.
 
-
-## Adding or updating docs
+## Docs
 
 - Start at `/docs/README.md` and keep it updated.
-- New doc files should be short, specific, and easy to link.
-- Use clear filenames:
-  - `topic.md`, `system-name.md`, `question-foo.md`
-- Prefer headings and bullet lists over long walls of text.
+- Keep docs short, specific, and easy to link.
+- Prefer headings and bullet lists over long paragraphs.
+- Use clear filenames: `topic.md`, `system-name.md`, `question-foo.md`
 
-### When to create a new doc vs edit an existing one
+### New doc vs update
 
 Create a new doc when:
 - It is an open question or decision.
 - It is a new system, mechanic, or design area.
 
-Edit an existing doc when:
+Update an existing doc when:
 - You are clarifying or extending something already documented.
 - You are recording a settled decision.
 
-## Adding game content
+## Game content
 
 - `/game/` is the Godot project root.
 - Put scenes, scripts, assets, and `project.godot` related content in `/game/`.
 - Do not put large working source files in `/game/` unless they are required at runtime.
 
-## Adding art
+## Art
 
 - Working files go in `/art_source/`.
-- Exported assets that are used in-game (PNGs, OGGs, etc.) go in `/game/`.
+- Exported assets used in-game (PNGs, OGGs, etc.) go in `/game/`.
 
 ## Commits
 
-Keep commit messages short and literal. A good format is:
+Keep commit messages short and literal. Good examples:
 
 - Add: `Add exports folder README`
 - Update: `Update root README quick map`
 - Fix: `Fix link paths in docs index`
 - Refine: `Refine art_source README`
 
-If your change touches multiple areas, prefer multiple commits.
+If one change touches multiple areas, prefer multiple commits.
 
-## Proposing changes or big moves
+## Bigger changes
 
 For bigger changes (repo structure changes, major system rewrites, scope additions):
 - Create an Issue or write a short doc in `/docs/` first.
-- Then implement after there is agreement.
+- Implement after there is agreement.
 
 ## Style notes
 
 - Keep writing clear and direct.
 - Avoid huge paragraphs.
-- Links should be relative paths whenever possible.
+- Use relative links whenever possible.
 
 ## Questions
 
