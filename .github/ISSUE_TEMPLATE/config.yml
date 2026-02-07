@@ -1,8 +1,10 @@
-blank_issues_enabled: false
+blank_issues_enabled: true
 contact_links:
-  - name: Read the docs first
-    url: https://github.com/damianfoxart/commonground/tree/main/docs
-    about: Start here if you are unsure where something belongs.
+  - name: Docs index
+    url: /damianfoxart/commonground/blob/main/docs/README.md
+    about: Start here if you are not sure where something belongs.
+
   - name: Contributing guide
-    url: https://github.com/damianfoxart/commonground/blob/main/CONTRIBUTING.md
+    url: /damianfoxart/commonground/blob/main/CONTRIBUTING.md
     about: Repo rules, where files go, and how to propose changes.
+
