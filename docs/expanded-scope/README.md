@@ -15,4 +15,4 @@ This folder contains deeper design constraints and long-form notes. These are no
 
 ## Naming and structure rules
 - Use lowercase with hyphens for folders. No spaces.
-- Keep each topic as one file. If a topic grows, split into clearly named files and update `docs/README.md`.
+- Keep each topic as one file. If a topic grows, split into clearly named files and update [../README.md](../README.md).
