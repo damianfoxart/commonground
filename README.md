@@ -1,5 +1,7 @@
 # Common Ground
 
+Docs index: ./docs/README.md
+
 **Common Ground** is a systems-driven village stewardship game focused on negotiation, ecology, and community resilience rather than combat or conquest.
 
 The player founds and sustains a frontier settlement (Stonehaven) in a hostile world where growth creates pressure, balance requires restraint, and violence is rarely a solution. Conflict is resolved through emotional negotiation systems, ecological management, and long-term communal decisions rather than attrition or power escalation.
