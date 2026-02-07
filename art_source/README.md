@@ -3,7 +3,7 @@
 This folder holds working art files (source files used to create exported game assets).
 
 ## What goes here
-- PSD/Krita/Aseprite/Blend files.
+- PSD/Krita/Aseprite/Blender files.
 - High-res originals, layered files, raw scans, reference sheets.
 - Anything that is not meant to ship directly in the Godot project.
 
@@ -11,6 +11,7 @@ This folder holds working art files (source files used to create exported game a
 - Final in-game assets: put those in `/game/` (textures, sprites, audio, imported assets).
 - Design docs and writing: use `/docs/`.
 - Build outputs: use `/exports/`.
+- Exported PNGs/OGGs that are used in-game: put those in /game/.
 
 ## Notes
 - Keep filenames descriptive.
