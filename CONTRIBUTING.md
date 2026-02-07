@@ -13,6 +13,7 @@ This repo is organized so ideas do not get lost, and game files do not get mixed
 
 If you are not sure where something belongs, put it in `/docs/` as a short note and link it from `/docs/README.md`.
 
+
 ## Adding or updating docs
 
 - Start at `/docs/README.md` and keep it updated.
