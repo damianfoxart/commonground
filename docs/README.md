@@ -5,7 +5,13 @@ This folder is the home for design documentation, scope notes, and project quest
 ## Current docs
 
 ### Scope
-- Expanded scope notes: ./expanded-scope/
+- Expanded scope index: ./expanded-scope/
+- Vision: ./expanded-scope/vision.md
+- Lore & World Rules: ./expanded-scope/lore.md
+- Content Pipeline & Safety Rails: ./expanded-scope/pipeline.md
+- Known Risks & Design Dangers: ./expanded-scope/risks.md
+- Structure: ./expanded-scope/structure.md
+
 
 ### Structure
 - Structure Tier 1: ./structuretier1.md
