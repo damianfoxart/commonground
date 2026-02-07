@@ -5,7 +5,7 @@ This folder is the home for design documentation, scope notes, and project quest
 ## Current docs
 
 ### Scope
-- Expanded scope notes: ./expanded%20scope%20docs/
+- Expanded scope notes: ./expanded-scope/
 
 ### Structure
 - Structure Tier 1: ./structuretier1.md
