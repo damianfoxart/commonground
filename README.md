@@ -37,16 +37,13 @@ The design intentionally prioritizes clarity, permanence, and consequence over r
   Conflict is resolved by understanding and countering emotional or ideological positions rather than dealing damage.
 
 - **Ecology is systemic, not cosmetic**  
-  Flora, fauna, and zones respond persistently to player behavior. Restoration creates new pressures rather than eliminating danger.
+  Flora, fauna, and aquifer responds persistently to player behavior. Restoration creates new pressures rather than eliminating danger.
 
 - **Growth creates responsibility**  
   Industrial acceleration, population increase, and infrastructure expansion all introduce new forms of instability.
 
 - **The village is the protagonist**  
   Stonehaven functions as a living system rather than a quest hub or base. Individual characters matter, but the community is the primary unit of play.
-
-- **No divine rescue**  
-  Gods exist as background infrastructure, not saviors. Stability is achieved through cooperation, not intervention.
 
 ---
 
