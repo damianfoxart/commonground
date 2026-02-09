@@ -1,39 +1,56 @@
-# The purpose of this folder is to organize all the assets needed to test the first phase of game play.  
+# Test Phase 1: Asset Notes
 
-Inventory:  
+Purpose: organize the assets needed to test the first phase of gameplay.
 
-## mago3.ttf  
-This is the pixel font that will match the aesthetic of the game  
+## Target Resolution
+- Base: 320x180 (exactly one screen)
+- Display: 1920x1080 via 6x integer upscale in Godot
 
-## test_room_1.png  
-This is the background layer which is exactly one screen (320 x 180) During gameplay this will scale to:  
-(1920 x 1080) requires an exact 6x upscale inside Godot, which keeps the actual pixel art nice and small.  
+## Assets
 
-## sp_char_down.png  
-player character, facing downward.  
+### Font
+- mago3.ttf
+  - Pixel font to match the game aesthetic
 
-## sp_char_right.png  
-player character, facing rightward. Can be flipped inside Godot for leftward facing.  
+### Background
+- test_room_1.png
+  - Background layer. Exactly one screen (320x180).
+  - In-game should upscale cleanly to 1920x1080 (6x) to keep pixels crisp.
 
-## sp_char_up.png  
-player character, facing upward.  
-Animation sprite sheets we can test in a subsequent phase, for this phase we can use an immobile static placeholder.  
-The player character requires an "Interaction" button which in this context will talk to the Dryad NPC.  
+### Player (placeholder)
+- sp_char_down.png
+  - Player facing down
+- sp_char_right.png
+  - Player facing right (flip in Godot for left)
+- sp_char_up.png
+  - Player facing up
+Notes:
+- For this phase, player can be a static placeholder sprite.
+- Player needs an "interact" action. In this phase it is used to talk to the Dryad and open books.
 
-## sp_dryad_01.png  
-NPC dryad who will speak to the player and give them a simple quest to open 3 books.   
-When the player character is adjacent to the Dryad and the interact button is pressed, a text box image will be   
-overlayed on top of the other sprites (top layer) and text will display: "Open three books."    
+### NPC
+- sp_dryad_01.png
+  - Dryad NPC
+Interaction:
+- On interact near Dryad: show text box and display: "Open three books."
 
-## text_box.png  
-this is the graphic image that displays over the other sprites and under the text. When the player presses   
-"interact" button a second time, the text box vanishes.  
+### UI
+- text_box.png
+  - Graphic that appears over sprites and under text.
+Behavior:
+- First interact: show text box
+- Second interact: hide text box
 
-## sp_book_01.png  
-the closed book. This is the default state the Book npc starts off in.  
+### Books (state swap)
+- sp_book_01.png
+  - Closed book (default state)
+- sp_book_02.png
+  - Open book (after interact)
 
-## sp_book_02.png  
-the open book. When the player has pressed "interact" adjacent to the book, it will swap into this second state.  
-
-The quest is complete when all three books are flipped to the open state and the player returns to the Dryad to report success.  
-The Dryad will then open the text box and state: "Good job!"  
+## Phase 1 Quest Flow
+1. Player walks to Dryad and presses interact.
+2. Text box appears: "Open three books."
+3. Player goes to each book and presses interact to swap:
+   - closed (sp_book_01.png) -> open (sp_book_02.png)
+4. When all 3 books are open, return to Dryad.
+5. Dryad shows text box and says: "Good job!"
