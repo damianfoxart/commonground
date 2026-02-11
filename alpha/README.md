@@ -2,9 +2,8 @@
 
 This folder contains the notes and assets for our first playable test slice.
 
-## Notes
-- [`Alpha Phase1 Assets`](../art_source/Alpha%20Phase1%20Assets/)
-- [`Alpha Phase2 Assets`](../art_source/Alpha%20Phase2%20Assets/)
+## Notes- [Alpha Phase 1 Notes](./Alpha_Phase1_Notes.md)
+- [Alpha Phase 2 Notes](./Alpha_Phase2_Notes.md)
 
 
 ## Assets
