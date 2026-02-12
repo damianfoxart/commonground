@@ -8,8 +8,8 @@ This folder contains the notes and assets for our first playable test slice.
 
 ## Assets
 Source art lives here:
-- [Alpha Phase1 Assets](../art_source/Alpha%20Phase1%20Assets/)
-- [Alpha Phase2 Assets](../art_source/Alpha%20Phase2%20Assets/)
+- [Alpha Phase1 Assets](../art_source/alpha_phase1_assets/)
+- [Alpha Phase2 Assets](../art_source/alpha_phase2_assets/)
 
 ## Goal for Phase 1
 A tiny playable loop:
