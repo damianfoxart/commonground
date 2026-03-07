@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/garden_plot.tscn" id="2"]
+
+[node name="World" type="Node2D"]
+
+[node name="House" type="Node2D" parent="."]
+position = Vector2(0, -120)
+
+[node name="GardenPlot1" parent="." instance=ExtResource("2")]
+position = Vector2(-80, 0)
+
+[node name="GardenPlot2" parent="." instance=ExtResource("2")]
+position = Vector2(0, 0)
+
+[node name="GardenPlot3" parent="." instance=ExtResource("2")]
+position = Vector2(80, 0)
+
+[node name="NPC" type="Node2D" parent="."]
+position = Vector2(140, -80)
+
+[node name="PlayerSpawn" type="Marker2D" parent="."]
+position = Vector2(0, 120)
+
+[node name="Player" parent="PlayerSpawn" instance=ExtResource("1")]
