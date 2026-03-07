@@ -7,8 +7,8 @@ enum PlantState {
 	READY,
 }
 
+@export_enum("carrot", "corn") var crop_type: String = "carrot"
 @export var plant_state: PlantState = PlantState.EMPTY
-@export var growth_step_seconds: float = 5.0
 @export var empty_color: Color = Color(0.45, 0.3, 0.18, 1.0)
 @export var seed_color: Color = Color(0.75, 0.6, 0.25, 1.0)
 @export var growing_color: Color = Color(0.3, 0.75, 0.3, 1.0)
@@ -18,6 +18,7 @@ enum PlantState {
 @onready var growth_timer: Timer = $GrowthTimer
 
 var _player_nearby: bool = false
+var _nearby_player: Node = null
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
@@ -32,13 +33,56 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 
 	if plant_state == PlantState.EMPTY:
-		_set_plant_state(PlantState.SEED)
+		if _can_plant_seed():
+			_set_plant_state(PlantState.SEED)
 		get_viewport().set_input_as_handled()
 		return
 
 	if plant_state == PlantState.READY:
+		_grant_harvest_seed()
 		_set_plant_state(PlantState.EMPTY)
 		get_viewport().set_input_as_handled()
+
+func _can_plant_seed() -> bool:
+	if _nearby_player == null:
+		return false
+
+	var seeds_value: Variant = _nearby_player.get("seeds")
+	if typeof(seeds_value) != TYPE_INT:
+		return false
+
+	var current_seeds: int = seeds_value
+	if current_seeds <= 0:
+		print("Seeds remaining: 0")
+		return false
+
+	_apply_player_seed_type()
+	_nearby_player.set("seeds", current_seeds - 1)
+	print("Seeds remaining: %d" % _nearby_player.get("seeds"))
+	return true
+
+func _apply_player_seed_type() -> void:
+	if _nearby_player == null:
+		return
+
+	var seed_type_value: Variant = _nearby_player.get("current_seed_type")
+	if typeof(seed_type_value) != TYPE_STRING:
+		return
+
+	var player_seed_type: String = seed_type_value
+	if player_seed_type == "carrot" or player_seed_type == "corn":
+		crop_type = player_seed_type
+
+func _grant_harvest_seed() -> void:
+	if _nearby_player == null:
+		return
+
+	var seeds_value: Variant = _nearby_player.get("seeds")
+	if typeof(seeds_value) != TYPE_INT:
+		return
+
+	_nearby_player.set("seeds", seeds_value + 1)
+	print("Seeds remaining: %d" % _nearby_player.get("seeds"))
 
 func _is_interact_event(event: InputEvent) -> bool:
 	if event.is_action_pressed("interact"):
@@ -53,10 +97,12 @@ func _is_interact_event(event: InputEvent) -> bool:
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		_player_nearby = true
+		_nearby_player = body
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		_player_nearby = false
+		_nearby_player = null
 
 func _on_growth_timer_timeout() -> void:
 	if plant_state == PlantState.SEED:
@@ -68,9 +114,14 @@ func _set_plant_state(new_state: PlantState) -> void:
 	plant_state = new_state
 	_update_visual()
 	if plant_state == PlantState.SEED or plant_state == PlantState.GROWING:
-		growth_timer.start(growth_step_seconds)
+		growth_timer.start(_get_growth_seconds_for_crop())
 	else:
 		growth_timer.stop()
+
+func _get_growth_seconds_for_crop() -> float:
+	if crop_type == "corn":
+		return 10.0
+	return 5.0
 
 func _update_visual() -> void:
 	match plant_state:
