@@ -73,3 +73,23 @@ The vertical slice is successful if:
 - The NPC responds to the outcome
 
 If these elements work together and the loop feels engaging, the slice is complete.
+
+## Design Principle
+
+The purpose of this slice is to prove the core gameplay loop.
+
+The loop should be short, readable, and repeatable in a few minutes of play.
+
+Player plants crop  
+↓  
+Crop grows over time  
+↓  
+Player waters or neglects plant  
+↓  
+Plant succeeds or fails  
+↓  
+NPC reacts to the outcome  
+↓  
+Player adjusts behavior and tries again
+
+Every system in this prototype should support or reinforce this loop.
