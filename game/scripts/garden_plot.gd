@@ -10,9 +10,14 @@ enum PlantState {
 @export_enum("carrot", "corn") var crop_type: String = "carrot"
 @export var plant_state: PlantState = PlantState.EMPTY
 @export var empty_color: Color = Color(0.45, 0.3, 0.18, 1.0)
-@export var seed_color: Color = Color(0.75, 0.6, 0.25, 1.0)
-@export var growing_color: Color = Color(0.3, 0.75, 0.3, 1.0)
-@export var ready_color: Color = Color(0.95, 0.85, 0.2, 1.0)
+
+@export var carrot_seed_color: Color = Color(0.78, 0.45, 0.2, 1.0)
+@export var carrot_growing_color: Color = Color(0.88, 0.52, 0.22, 1.0)
+@export var carrot_ready_color: Color = Color(0.98, 0.62, 0.25, 1.0)
+
+@export var corn_seed_color: Color = Color(0.78, 0.72, 0.22, 1.0)
+@export var corn_growing_color: Color = Color(0.9, 0.82, 0.25, 1.0)
+@export var corn_ready_color: Color = Color(1.0, 0.92, 0.35, 1.0)
 
 @onready var placeholder: Polygon2D = $Placeholder
 @onready var growth_timer: Timer = $GrowthTimer
@@ -123,13 +128,27 @@ func _get_growth_seconds_for_crop() -> float:
 		return 10.0
 	return 5.0
 
-func _update_visual() -> void:
-	match plant_state:
-		PlantState.EMPTY:
-			placeholder.color = empty_color
+func _get_crop_state_color(state: PlantState) -> Color:
+	if crop_type == "corn":
+		match state:
+			PlantState.SEED:
+				return corn_seed_color
+			PlantState.GROWING:
+				return corn_growing_color
+			PlantState.READY:
+				return corn_ready_color
+			_:
+				return empty_color
+
+	match state:
 		PlantState.SEED:
-			placeholder.color = seed_color
+			return carrot_seed_color
 		PlantState.GROWING:
-			placeholder.color = growing_color
+			return carrot_growing_color
 		PlantState.READY:
-			placeholder.color = ready_color
+			return carrot_ready_color
+		_:
+			return empty_color
+
+func _update_visual() -> void:
+	placeholder.color = _get_crop_state_color(plant_state)
